@@ -1,0 +1,667 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Setting_In_Vault_Advance_Search" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="496,472" sap2010:WorkflowViewState.IdRef="Setting_In_Vault_Advance_Search_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="21">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="16">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Setting_In_Vault_Advance_Search" sap:VirtualizedContainerService.HintSize="476,412" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="AddCriteriaExists" />
+      <Variable x:TypeArguments="x:Boolean" Name="FileNameExists" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'Connectivity.VaultPro.e...'" sap:VirtualizedContainerService.HintSize="434,320" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="7742b35e307c25bfa27005b2f89c8b59" Selector="&lt;wnd app='connectivity.vaultpro.exe' ctrlname='ExplorerForm' /&gt;">
+      <ui:WindowScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="242,174" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Flowchart sap2010:Annotation.AnnotationText="" sap:VirtualizedContainerService.HintSize="635,1391" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+              <Flowchart.Variables>
+                <Variable x:TypeArguments="x:Boolean" Name="StateExists" />
+                <Variable x:TypeArguments="x:Boolean" Name="FileExtensionExists" />
+              </Flowchart.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <av:Point x:Key="ShapeLocation">240,2.5</av:Point>
+                  <av:Size x:Key="ShapeSize">60,75</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">270,77.5 270,107.5 260,107.5 260,123.5</av:PointCollection>
+                  <x:Double x:Key="Height">1324</x:Double>
+                  <x:Double x:Key="Width">601</x:Double>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Flowchart.StartNode>
+                <x:Reference>__ReferenceID10</x:Reference>
+              </Flowchart.StartNode>
+              <FlowDecision x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="If 'Add Criteria' exists" Condition="[AddCriteriaExists]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <av:Point x:Key="ShapeLocation">200.5,296.5</av:Point>
+                    <av:Size x:Key="ShapeSize">79,87</av:Size>
+                    <av:PointCollection x:Key="TrueConnector">200.5,340 180,340 180,393.5 210,393.5 210,423.5</av:PointCollection>
+                    <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <FlowDecision.True>
+                  <FlowStep x:Name="__ReferenceID3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:Point x:Key="ShapeLocation">110,423.5</av:Point>
+                        <av:Size x:Key="ShapeSize">200,93</av:Size>
+                        <av:PointCollection x:Key="ConnectorLocation">210,516.5 210,546.5 501.5,546.5 501.5,548</av:PointCollection>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:UiElementExists sap2010:Annotation.AnnotationText="Check if 'File Name' criterion is present" DisplayName="Element Exists 'WindowsForms10.Window.b...'" Exists="[FileNameExists]" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                      <ui:UiElementExists.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="8c73b1fcf921288d4acd8d512cd0fa42" Selector="&lt;wnd app='connectivity.vaultpro.exe' ctrlname='ExplorerForm' /&gt;&lt;wnd ctrlname='m_mainPanelContainer' /&gt;&lt;wnd ctrlname='m_viewPanel' /&gt;&lt;wnd ctrlname='FolderViewControl' /&gt;&lt;wnd ctrlname='ExpandedQuickFindControl' /&gt;&lt;wnd ctrlname='m_table' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='File Name' /&gt;" TimeoutMS="5000">
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:UiElementExists.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:UiElementExists>
+                    <FlowStep.Next>
+                      <FlowDecision x:Name="__ReferenceID4" sap2010:Annotation.AnnotationText="If 'File Name ' exists" Condition="[FileNameExists]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <av:Point x:Key="ShapeLocation">462,548</av:Point>
+                            <av:Size x:Key="ShapeSize">79,87</av:Size>
+                            <av:PointCollection x:Key="FalseConnector">541,591.5 561,591.5 561,663 501,663 501,693</av:PointCollection>
+                            <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                            <av:PointCollection x:Key="TrueConnector">462,591.5 70,591.5 70,726 100,726</av:PointCollection>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <FlowDecision.True>
+                          <FlowStep x:Name="__ReferenceID1">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <av:Point x:Key="ShapeLocation">100,685</av:Point>
+                                <av:Size x:Key="ShapeSize">200,82</av:Size>
+                                <av:PointCollection x:Key="ConnectorLocation">200,767 200,797 200.5,797 200.5,817</av:PointCollection>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:UiElementExists sap2010:Annotation.AnnotationText="Checks if 'State' exists" DisplayName="Element Exists 'WindowsForms10.Window.b...'" Exists="[StateExists]" sap:VirtualizedContainerService.HintSize="200,82" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+                              <ui:UiElementExists.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="ed0dc8f4c5123d7af580ae17bf239375" Selector="&lt;wnd ctrlname='m_mainPanelContainer' /&gt;&lt;wnd ctrlname='m_viewPanel' /&gt;&lt;wnd ctrlname='FolderViewControl' /&gt;&lt;wnd ctrlname='ExpandedQuickFindControl' /&gt;&lt;wnd ctrlname='m_table' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='State' /&gt;" TimeoutMS="5000">
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:UiElementExists.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:UiElementExists>
+                            <FlowStep.Next>
+                              <FlowDecision x:Name="__ReferenceID5" Condition="[StateExists]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <av:Point x:Key="ShapeLocation">161,817</av:Point>
+                                    <av:Size x:Key="ShapeSize">79,87</av:Size>
+                                    <av:PointCollection x:Key="FalseConnector">240,860.5 270,860.5 270,870 330,870</av:PointCollection>
+                                    <av:PointCollection x:Key="TrueConnector">161,860.5 131,860.5 131,990 170,990</av:PointCollection>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <FlowDecision.True>
+                                  <FlowStep x:Name="__ReferenceID0">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <av:Point x:Key="ShapeLocation">170,964.5</av:Point>
+                                        <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                        <av:PointCollection x:Key="ConnectorLocation">270,1015.5 270,1056.5</av:PointCollection>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:UiElementExists DisplayName="Element Exists 'WindowsForms10.Window.b...'" Exists="[FileExtensionExists]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
+                                      <ui:UiElementExists.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="2b9638919d988a6ac392f9bcba3f26dd" Selector="&lt;wnd ctrlname='m_mainPanelContainer' /&gt;&lt;wnd ctrlname='m_viewPanel' /&gt;&lt;wnd ctrlname='FolderViewControl' /&gt;&lt;wnd ctrlname='ExpandedQuickFindControl' /&gt;&lt;wnd ctrlname='m_table' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='File Extension' /&gt;" TimeoutMS="5000">
+                                          <ui:Target.WaitForReady>
+                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                          </ui:Target.WaitForReady>
+                                        </ui:Target>
+                                      </ui:UiElementExists.Target>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:UiElementExists>
+                                    <FlowStep.Next>
+                                      <FlowDecision x:Name="__ReferenceID8" Condition="[FileExtensionExists]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_5">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <av:Point x:Key="ShapeLocation">230.5,1056.5</av:Point>
+                                            <av:Size x:Key="ShapeSize">79,87</av:Size>
+                                            <av:PointCollection x:Key="FalseConnector">309.5,1100 339.5,1100 339.5,1120 350,1120</av:PointCollection>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <FlowDecision.False>
+                                          <FlowStep x:Name="__ReferenceID9">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <av:Point x:Key="ShapeLocation">350,1087</av:Point>
+                                                <av:Size x:Key="ShapeSize">200,66</av:Size>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'WindowsForms10.Window.b...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                <ui:Click.CursorPosition>
+                                                  <ui:CursorPosition Position="Center">
+                                                    <ui:CursorPosition.OffsetX>
+                                                      <InArgument x:TypeArguments="x:Int32" />
+                                                    </ui:CursorPosition.OffsetX>
+                                                    <ui:CursorPosition.OffsetY>
+                                                      <InArgument x:TypeArguments="x:Int32" />
+                                                    </ui:CursorPosition.OffsetY>
+                                                  </ui:CursorPosition>
+                                                </ui:Click.CursorPosition>
+                                                <ui:Click.Target>
+                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="724bb088646cf53293134907bee646e6" Selector="&lt;wnd ctrlname='m_mainPanelContainer' /&gt;&lt;wnd ctrlname='m_viewPanel' /&gt;&lt;wnd ctrlname='FolderViewControl' /&gt;&lt;wnd ctrlname='ExpandedQuickFindControl' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='m_addCriteriaButton' /&gt;" TimeoutMS="5000">
+                                                    <ui:Target.WaitForReady>
+                                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                    </ui:Target.WaitForReady>
+                                                  </ui:Target>
+                                                </ui:Click.Target>
+                                              </ui:Click>
+                                              <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'list item  AC Material'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="SelectItem_5" Item="File Extension">
+                                                <ui:SelectItem.Items>
+                                                  <scg:List x:TypeArguments="x:String" Capacity="50">
+                                                    <x:String>10 digit number</x:String>
+                                                    <x:String>AC Material</x:String>
+                                                    <x:String>AC Material Comment</x:String>
+                                                    <x:String>AC Modification text</x:String>
+                                                    <x:String>AC Name</x:String>
+                                                    <x:String>AC Name Comments</x:String>
+                                                    <x:String>AC Secrecy Class</x:String>
+                                                    <x:String>AC Treatment</x:String>
+                                                    <x:String>AC Treatment Comment</x:String>
+                                                    <x:String>AC weight</x:String>
+                                                    <x:String>Airend</x:String>
+                                                    <x:String>Architecture</x:String>
+                                                    <x:String>BackupApprover</x:String>
+                                                    <x:String>Blank number</x:String>
+                                                    <x:String>Bypass</x:String>
+                                                    <x:String>Cable Entry</x:String>
+                                                    <x:String>Cadac Project Settings Config</x:String>
+                                                    <x:String>Cadac Publish to SharePoint Config</x:String>
+                                                    <x:String>Cadac Publish to Viewport Config</x:String>
+                                                    <x:String>Cadac Secondary Document AutoCAD Config</x:String>
+                                                    <x:String>Cadac Secondary Document Inventor Config</x:String>
+                                                    <x:String>CAST</x:String>
+                                                    <x:String>Category Name</x:String>
+                                                    <x:String>Category Name (Historical)</x:String>
+                                                    <x:String>Change Order State</x:String>
+                                                    <x:String>Check Valve</x:String>
+                                                    <x:String>Checked By</x:String>
+                                                    <x:String>Checked In</x:String>
+                                                    <x:String>Checked Out</x:String>
+                                                    <x:String>Checked Out By</x:String>
+                                                    <x:String>Checked Out Local Spec</x:String>
+                                                    <x:String>Checked Out Machine</x:String>
+                                                    <x:String>Class Description</x:String>
+                                                    <x:String>Class Number</x:String>
+                                                    <x:String>Classification</x:String>
+                                                    <x:String>Comment</x:String>
+                                                    <x:String>Compare</x:String>
+                                                    <x:String>Contact e-mail</x:String>
+                                                    <x:String>Contacts</x:String>
+                                                    <x:String>Contract Number</x:String>
+                                                    <x:String>Controlled By Change Order</x:String>
+                                                    <x:String>Cooling</x:String>
+                                                    <x:String>Core Component</x:String>
+                                                    <x:String>Create Date</x:String>
+                                                    <x:String>Created By</x:String>
+                                                    <x:String>Currency</x:String>
+                                                    <x:String>Current Owner</x:String>
+                                                    <x:String>Current Prim (A)</x:String>
+                                                    <x:String>Current Sec (A)</x:String>
+                                                    <x:String>Custom Object Name</x:String>
+                                                  </scg:List>
+                                                </ui:SelectItem.Items>
+                                                <ui:SelectItem.Target>
+                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="60b1fe3e152dee54ddf09114d2d3db5c" Selector="&lt;wnd app='connectivity.vaultpro.exe' cls='WindowsForms10.Window.*' /&gt;&lt;wnd ctrlname='PopupPropertySelectionControl' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='m_propertyList' /&gt;&lt;ctrl name='AC Material' role='list item' /&gt;" TimeoutMS="5000">
+                                                    <ui:Target.WaitForReady>
+                                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                    </ui:Target.WaitForReady>
+                                                  </ui:Target>
+                                                </ui:SelectItem.Target>
+                                              </ui:SelectItem>
+                                              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'list item'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                <ui:Click.CursorPosition>
+                                                  <ui:CursorPosition Position="Center">
+                                                    <ui:CursorPosition.OffsetX>
+                                                      <InArgument x:TypeArguments="x:Int32" />
+                                                    </ui:CursorPosition.OffsetX>
+                                                    <ui:CursorPosition.OffsetY>
+                                                      <InArgument x:TypeArguments="x:Int32" />
+                                                    </ui:CursorPosition.OffsetY>
+                                                  </ui:CursorPosition>
+                                                </ui:Click.CursorPosition>
+                                                <ui:Click.Target>
+                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="2ab9260c6cefa5921e173af08427c6d7" Selector="&lt;wnd app='connectivity.vaultpro.exe' cls='WindowsForms10.Window.*' /&gt;&lt;wnd ctrlname='PopupPropertySelectionControl' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='m_propertyList' /&gt;&lt;ctrl name='File Extension' role='list item' /&gt;" TimeoutMS="5000">
+                                                    <ui:Target.WaitForReady>
+                                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                    </ui:Target.WaitForReady>
+                                                  </ui:Target>
+                                                </ui:Click.Target>
+                                              </ui:Click>
+                                            </Sequence>
+                                          </FlowStep>
+                                        </FlowDecision.False>
+                                      </FlowDecision>
+                                    </FlowStep.Next>
+                                  </FlowStep>
+                                </FlowDecision.True>
+                                <FlowDecision.False>
+                                  <FlowStep x:Name="__ReferenceID7">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <av:Point x:Key="ShapeLocation">330,837</av:Point>
+                                        <av:Size x:Key="ShapeSize">200,66</av:Size>
+                                        <av:PointCollection x:Key="ConnectorLocation">430,903 430,933 270,933 270,964.5</av:PointCollection>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Sequence DisplayName="Sequence to add 'State' to advance search" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="Clicks on 'Add Criteria'" ClickType="CLICK_SINGLE" DisplayName="Click 'WindowsForms10.Window.b...'" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                        <ui:Click.CursorPosition>
+                                          <ui:CursorPosition Position="Center">
+                                            <ui:CursorPosition.OffsetX>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:CursorPosition.OffsetX>
+                                            <ui:CursorPosition.OffsetY>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:CursorPosition.OffsetY>
+                                          </ui:CursorPosition>
+                                        </ui:Click.CursorPosition>
+                                        <ui:Click.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="7b0ed607ab23b4c13ef1f5cdd9aac13b" Selector="&lt;wnd app='connectivity.vaultpro.exe' ctrlname='ExplorerForm' /&gt;&lt;wnd ctrlname='m_mainPanelContainer' /&gt;&lt;wnd ctrlname='m_viewPanel' /&gt;&lt;wnd ctrlname='FolderViewControl' /&gt;&lt;wnd ctrlname='ExpandedQuickFindControl' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='m_addCriteriaButton' /&gt;" TimeoutMS="5000">
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:Click.Target>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:Click>
+                                      <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'list item  AC Material'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="SelectItem_4" Item="State">
+                                        <ui:SelectItem.Items>
+                                          <scg:List x:TypeArguments="x:String" Capacity="50">
+                                            <x:String>10 digit number</x:String>
+                                            <x:String>AC Material</x:String>
+                                            <x:String>AC Material Comment</x:String>
+                                            <x:String>AC Modification text</x:String>
+                                            <x:String>AC Name</x:String>
+                                            <x:String>AC Name Comments</x:String>
+                                            <x:String>AC Secrecy Class</x:String>
+                                            <x:String>AC Treatment</x:String>
+                                            <x:String>AC Treatment Comment</x:String>
+                                            <x:String>AC weight</x:String>
+                                            <x:String>Airend</x:String>
+                                            <x:String>Architecture</x:String>
+                                            <x:String>BackupApprover</x:String>
+                                            <x:String>Blank number</x:String>
+                                            <x:String>Bypass</x:String>
+                                            <x:String>Cable Entry</x:String>
+                                            <x:String>Cadac Project Settings Config</x:String>
+                                            <x:String>Cadac Publish to SharePoint Config</x:String>
+                                            <x:String>Cadac Publish to Viewport Config</x:String>
+                                            <x:String>Cadac Secondary Document AutoCAD Config</x:String>
+                                            <x:String>Cadac Secondary Document Inventor Config</x:String>
+                                            <x:String>CAST</x:String>
+                                            <x:String>Category Name</x:String>
+                                            <x:String>Category Name (Historical)</x:String>
+                                            <x:String>Change Order State</x:String>
+                                            <x:String>Check Valve</x:String>
+                                            <x:String>Checked By</x:String>
+                                            <x:String>Checked In</x:String>
+                                            <x:String>Checked Out</x:String>
+                                            <x:String>Checked Out By</x:String>
+                                            <x:String>Checked Out Local Spec</x:String>
+                                            <x:String>Checked Out Machine</x:String>
+                                            <x:String>Class Description</x:String>
+                                            <x:String>Class Number</x:String>
+                                            <x:String>Classification</x:String>
+                                            <x:String>Comment</x:String>
+                                            <x:String>Compare</x:String>
+                                            <x:String>Contact e-mail</x:String>
+                                            <x:String>Contacts</x:String>
+                                            <x:String>Contract Number</x:String>
+                                            <x:String>Controlled By Change Order</x:String>
+                                            <x:String>Cooling</x:String>
+                                            <x:String>Core Component</x:String>
+                                            <x:String>Create Date</x:String>
+                                            <x:String>Created By</x:String>
+                                            <x:String>Currency</x:String>
+                                            <x:String>Current Owner</x:String>
+                                            <x:String>Current Prim (A)</x:String>
+                                            <x:String>Current Sec (A)</x:String>
+                                            <x:String>Custom Object Name</x:String>
+                                          </scg:List>
+                                        </ui:SelectItem.Items>
+                                        <ui:SelectItem.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="60b1fe3e152dee54ddf09114d2d3db5c" Selector="&lt;wnd app='connectivity.vaultpro.exe' cls='WindowsForms10.Window.*' /&gt;&lt;wnd ctrlname='PopupPropertySelectionControl' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='m_propertyList' /&gt;&lt;ctrl name='AC Material' role='list item' /&gt;" TimeoutMS="5000">
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:SelectItem.Target>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:SelectItem>
+                                      <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'list item  State'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                        <ui:Click.CursorPosition>
+                                          <ui:CursorPosition Position="Center">
+                                            <ui:CursorPosition.OffsetX>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:CursorPosition.OffsetX>
+                                            <ui:CursorPosition.OffsetY>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:CursorPosition.OffsetY>
+                                          </ui:CursorPosition>
+                                        </ui:Click.CursorPosition>
+                                        <ui:Click.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="e10b9b668fa51ba686e353745189229b" Selector="&lt;wnd app='connectivity.vaultpro.exe' cls='WindowsForms10.Window.*' /&gt;&lt;wnd ctrlname='PopupPropertySelectionControl' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='m_propertyList' /&gt;&lt;ctrl name='State' role='list item' /&gt;" TimeoutMS="5000">
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:Click.Target>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:Click>
+                                    </Sequence>
+                                    <FlowStep.Next>
+                                      <x:Reference>__ReferenceID0</x:Reference>
+                                    </FlowStep.Next>
+                                  </FlowStep>
+                                </FlowDecision.False>
+                              </FlowDecision>
+                            </FlowStep.Next>
+                          </FlowStep>
+                        </FlowDecision.True>
+                        <FlowDecision.False>
+                          <FlowStep x:Name="__ReferenceID6">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <av:Point x:Key="ShapeLocation">401,693</av:Point>
+                                <av:Size x:Key="ShapeSize">200,66</av:Size>
+                                <av:PointCollection x:Key="ConnectorLocation">501,759 501,789 371,789 371,669 200,669 200,685</av:PointCollection>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Sequence DisplayName="Sequence To Add &quot;File Name&quot; in advance search" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="Clicks on 'Add Criteria'" ClickType="CLICK_SINGLE" DisplayName="Click 'WindowsForms10.Window.b...'" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                <ui:Click.CursorPosition>
+                                  <ui:CursorPosition Position="Center">
+                                    <ui:CursorPosition.OffsetX>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetX>
+                                    <ui:CursorPosition.OffsetY>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetY>
+                                  </ui:CursorPosition>
+                                </ui:Click.CursorPosition>
+                                <ui:Click.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="7b0ed607ab23b4c13ef1f5cdd9aac13b" Selector="&lt;wnd app='connectivity.vaultpro.exe' ctrlname='ExplorerForm' /&gt;&lt;wnd ctrlname='m_mainPanelContainer' /&gt;&lt;wnd ctrlname='m_viewPanel' /&gt;&lt;wnd ctrlname='FolderViewControl' /&gt;&lt;wnd ctrlname='ExpandedQuickFindControl' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='m_addCriteriaButton' /&gt;" TimeoutMS="5000">
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </ui:Click.Target>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:Click>
+                              <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'Connectivity.VaultPro.e...'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="SelectItem_3" Item="File Name">
+                                <ui:SelectItem.Items>
+                                  <scg:List x:TypeArguments="x:String" Capacity="50">
+                                    <x:String>10 digit number</x:String>
+                                    <x:String>AC Material</x:String>
+                                    <x:String>AC Material Comment</x:String>
+                                    <x:String>AC Modification text</x:String>
+                                    <x:String>AC Name</x:String>
+                                    <x:String>AC Name Comments</x:String>
+                                    <x:String>AC Secrecy Class</x:String>
+                                    <x:String>AC Treatment</x:String>
+                                    <x:String>AC Treatment Comment</x:String>
+                                    <x:String>AC weight</x:String>
+                                    <x:String>Airend</x:String>
+                                    <x:String>Architecture</x:String>
+                                    <x:String>BackupApprover</x:String>
+                                    <x:String>Blank number</x:String>
+                                    <x:String>Bypass</x:String>
+                                    <x:String>Cable Entry</x:String>
+                                    <x:String>Cadac Project Settings Config</x:String>
+                                    <x:String>Cadac Publish to SharePoint Config</x:String>
+                                    <x:String>Cadac Publish to Viewport Config</x:String>
+                                    <x:String>Cadac Secondary Document AutoCAD Config</x:String>
+                                    <x:String>Cadac Secondary Document Inventor Config</x:String>
+                                    <x:String>CAST</x:String>
+                                    <x:String>Category Name</x:String>
+                                    <x:String>Category Name (Historical)</x:String>
+                                    <x:String>Change Order State</x:String>
+                                    <x:String>Check Valve</x:String>
+                                    <x:String>Checked By</x:String>
+                                    <x:String>Checked In</x:String>
+                                    <x:String>Checked Out</x:String>
+                                    <x:String>Checked Out By</x:String>
+                                    <x:String>Checked Out Local Spec</x:String>
+                                    <x:String>Checked Out Machine</x:String>
+                                    <x:String>Class Description</x:String>
+                                    <x:String>Class Number</x:String>
+                                    <x:String>Classification</x:String>
+                                    <x:String>Comment</x:String>
+                                    <x:String>Compare</x:String>
+                                    <x:String>Contact e-mail</x:String>
+                                    <x:String>Contacts</x:String>
+                                    <x:String>Contract Number</x:String>
+                                    <x:String>Controlled By Change Order</x:String>
+                                    <x:String>Cooling</x:String>
+                                    <x:String>Core Component</x:String>
+                                    <x:String>Create Date</x:String>
+                                    <x:String>Created By</x:String>
+                                    <x:String>Currency</x:String>
+                                    <x:String>Current Owner</x:String>
+                                    <x:String>Current Prim (A)</x:String>
+                                    <x:String>Current Sec (A)</x:String>
+                                    <x:String>Custom Object Name</x:String>
+                                  </scg:List>
+                                </ui:SelectItem.Items>
+                                <ui:SelectItem.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="a890283116ad1be3ddfe45239bb73efc" Selector="&lt;wnd app='connectivity.vaultpro.exe' cls='WindowsForms10.Window.*' /&gt;&lt;wnd ctrlname='PopupPropertySelectionControl' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='m_propertyList' /&gt;&lt;ctrl name='10 digit number' role='list item' /&gt;" TimeoutMS="5000">
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </ui:SelectItem.Target>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:SelectItem>
+                              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'list item  File Name'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                <ui:Click.CursorPosition>
+                                  <ui:CursorPosition Position="Center">
+                                    <ui:CursorPosition.OffsetX>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetX>
+                                    <ui:CursorPosition.OffsetY>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetY>
+                                  </ui:CursorPosition>
+                                </ui:Click.CursorPosition>
+                                <ui:Click.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="c3298212d0bd2196045f6f548c73ca0c" Selector="&lt;wnd app='connectivity.vaultpro.exe' cls='WindowsForms10.Window.*' /&gt;&lt;wnd ctrlname='PopupPropertySelectionControl' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='m_propertyList' /&gt;&lt;ctrl name='File Name' role='list item' /&gt;" TimeoutMS="5000">
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </ui:Click.Target>
+                              </ui:Click>
+                            </Sequence>
+                            <FlowStep.Next>
+                              <x:Reference>__ReferenceID1</x:Reference>
+                            </FlowStep.Next>
+                          </FlowStep>
+                        </FlowDecision.False>
+                      </FlowDecision>
+                    </FlowStep.Next>
+                  </FlowStep>
+                </FlowDecision.True>
+              </FlowDecision>
+              <FlowStep x:Name="__ReferenceID10">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">160,123.5</av:Point>
+                    <av:Size x:Key="ShapeSize">200,93</av:Size>
+                    <av:PointCollection x:Key="ConnectorLocation">260,216.5 260,246.5 240,246.5 240,296.5</av:PointCollection>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <TryCatch sap2010:Annotation.AnnotationText="Tries to check if 'Add criteria' exists" sap:VirtualizedContainerService.HintSize="438,395" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <TryCatch.Try>
+                    <ui:UiElementExists sap2010:Annotation.AnnotationText="Checks if advance search screen has appeared" DisplayName="Element Exists 'WindowsForms10.Window.b...'" Exists="[AddCriteriaExists]" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                      <ui:UiElementExists.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="724bb088646cf53293134907bee646e6" Selector="&lt;wnd ctrlname='m_mainPanelContainer' /&gt;&#xA;&lt;wnd ctrlname='m_viewPanel' /&gt;&#xA;&lt;wnd ctrlname='FolderViewControl' /&gt;&#xA;&lt;wnd ctrlname='ExpandedQuickFindControl' /&gt;&#xA;&lt;wnd ctrlname='panel1' /&gt;&#xA;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&#xA;&lt;wnd ctrlname='m_addCriteriaButton' /&gt;&#xA;" TimeoutMS="5000">
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:UiElementExists.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:UiElementExists>
+                  </TryCatch.Try>
+                  <TryCatch.Catches>
+                    <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ActivityAction x:TypeArguments="ui:SelectorNotFoundException">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="ui:SelectorNotFoundException" Name="exception" />
+                        </ActivityAction.Argument>
+                      </ActivityAction>
+                    </Catch>
+                  </TryCatch.Catches>
+                </TryCatch>
+                <FlowStep.Next>
+                  <x:Reference>__ReferenceID2</x:Reference>
+                </FlowStep.Next>
+              </FlowStep>
+              <x:Reference>__ReferenceID3</x:Reference>
+              <x:Reference>__ReferenceID4</x:Reference>
+              <x:Reference>__ReferenceID1</x:Reference>
+              <x:Reference>__ReferenceID5</x:Reference>
+              <x:Reference>__ReferenceID6</x:Reference>
+              <x:Reference>__ReferenceID7</x:Reference>
+              <x:Reference>__ReferenceID0</x:Reference>
+              <x:Reference>__ReferenceID8</x:Reference>
+              <x:Reference>__ReferenceID9</x:Reference>
+            </Flowchart>
+          </Sequence>
+        </ActivityAction>
+      </ui:WindowScope.Body>
+    </ui:WindowScope>
+  </Sequence>
+</Activity>
